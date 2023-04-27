@@ -32,11 +32,17 @@ DisableCloseButton(hWnd) {
   }
 ;;;;;;;;;;;;;;
 ; main gui
+Gui,1: Color, 1f1f1f
+Gui,1: Font, s35 cffffff , Calibri
+Gui,1: add, Text, ,MARUADERS voIP toggle
+Gui,1: Font, s15 cff9026 , Calibri
 Gui,1: Add, Text, , This script is running!`n You can now go in game and play`n`n•Double press capslock to toggle voIP to an open state`n•When red dot is showing at the bottom voip is open`n•Also note that MARUADERS shows a wave form at the top left of the screen to show when mic is being transmitted`n>>Enjoy
-Gui,1: Add, Button, x20 y100 w80 h40 gExitScript, Exit
+Gui,1: Add, Button, x20 y300 w80 h40 gExitScript, Exit
 Gui,1: Show,,MAIN_GUI
 OnMessage(0x112, "WM_SYSCOMMAND")
 Return
+
+
 
 WM_SYSCOMMAND(wParam)
 {
