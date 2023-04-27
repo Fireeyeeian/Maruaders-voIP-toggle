@@ -27,4 +27,5 @@ return
     Gui Hide
   }
 }
+!del::ExitApp,
 Return
