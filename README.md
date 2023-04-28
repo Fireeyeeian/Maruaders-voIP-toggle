@@ -1,6 +1,8 @@
 # Maruaders voip toggle
  a work around for toggling voIP always on
  
+ 
+ 
 •Make sure voIP is set to push to talk
 
 •Double press capslock in game to toggle voIP to an open state
