@@ -1,7 +1,7 @@
 # Maruaders voip toggle
- a work around for toggling voIP always on
+ A work around for toggling voIP always on
  
- 
+ ...
  
 •Make sure voIP is set to push to talk
 
