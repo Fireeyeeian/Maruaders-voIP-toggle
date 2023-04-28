@@ -36,7 +36,7 @@ Gui,1: Color, 1f1f1f
 Gui,1: Font, s35 cffffff , Calibri
 Gui,1: add, Text, ,MARUADERS voIP toggle
 Gui,1: Font, s15 cff9026 , Calibri
-Gui,1: Add, Text, , This script is running!`n You can now go in game and play`n`n•Double press capslock to toggle voIP to an open state`n•When red dot is showing at the bottom voip is open`n•Also note that MARUADERS shows a wave form at the top left of the screen to show when mic is being transmitted`n`n**SMALL BUG: If you alt+tab while transmitting via this it will need to be re toggled on when you get back to the game`n>>Enjoy
+Gui,1: Add, Text, , This script is running!`n You can now go in game and play`n`n•Double press capslock to toggle voIP to an open state`n•When red dot is showing at the bottom voip is open`n•Also note that MARUADERS shows a wave form at the top left of the screen to show when mic is being transmitted`n`n**SMALL BUG: If you alt+tab while transmitting via this it will need to be re toggled on when you get back to the game even if red dot is showing.`n>>Enjoy
 Gui,1: Add, Button, x20 y340 w80 h40 gExitScript, Exit
 Gui,1: Font, s12 cff9026 , Calibri
 Gui,1: add, Text, x900 y360, By FireEyeEian
