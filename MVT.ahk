@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿#NoEnv  ; Recommended for performance and compatcapslockibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -36,10 +36,10 @@ Gui,1: Color, 1f1f1f
 Gui,1: Font, s35 cffffff , Calibri
 Gui,1: add, Text, ,MARUADERS voIP toggle
 Gui,1: Font, s15 cff9026 , Calibri
-Gui,1: Add, Text, , This script is running!`n You can now go in game and play`n`n•Double press capslock to toggle voIP to an open state`n•When red dot is showing at the bottom voip is open`n•Also note that MARUADERS shows a wave form at the top left of the screen to show when mic is being transmitted`n>>Enjoy
-Gui,1: Add, Button, x20 y300 w80 h40 gExitScript, Exit
+Gui,1: Add, Text, , This script is running!`n You can now go in game and play`n`n•Double press capslock to toggle voIP to an open state`n•When red dot is showing at the bottom voip is open`n•Also note that MARUADERS shows a wave form at the top left of the screen to show when mic is being transmitted`n`n**SMALL BUG: If you alt+tab while transmitting via this it will need to be re toggled on when you get back to the game`n>>Enjoy
+Gui,1: Add, Button, x20 y340 w80 h40 gExitScript, Exit
 Gui,1: Font, s12 cff9026 , Calibri
-Gui,1: add, Text, x900 y320, By FireEyeEian
+Gui,1: add, Text, x900 y360, By FireEyeEian
 Gui,1: Show,,MAIN_GUI
 OnMessage(0x112, "WM_SYSCOMMAND")
 
@@ -74,7 +74,7 @@ MsgBox,,, Thanks for using MVT by FireEyeEian :)`n (App will close now in 4 seco
 ; Initialize the loop status variable to false
 loopRunning := false
 
-; Set up the Caps Lock key to toggle the loop
+; Set up the capslock key to toggle the loop
 $CapsLock::
 
 
@@ -90,7 +90,7 @@ If (A_PriorHotKey = A_ThisHotKey and A_TimeSincePriorHotkey < 500)
     ; If the loop is now running, start the function loop
     If (loopRunning)
     {
-       Gui,2: show
+       Gui,2: show, NoActivate
        MouseClick, Left
       SetTimer, FunctionLoop, 500
     }
@@ -111,13 +111,12 @@ FunctionLoop:
     {
         ; Pause the loop if the specified window becomes unfocused
         Gui,2: hide
-      Send, v
         SetTimer, FunctionLoop, Off
         While not WinActive("RaidGame")
         {
             Sleep, 100
         }
-        Gui,2: show
+        Gui,2: show, NoActivate
        MouseClick, Left
       SetTimer, FunctionLoop, 500
     }
